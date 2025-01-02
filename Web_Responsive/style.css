@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #ddcebb;
+}
+
+.wrapper {
+  max-width: 130.5rem;
+  margin: auto;
+  padding: 0 3rem;
+}
+
+.heading-large {
+  font-size: 7rem;
+  line-height: 1;
+}
+.heading-medium {
+  font-size: 3rem;
+}
+.text-medium {
+  font-size: 2.3rem;
+  line-height: 1.5;
+}
+.text-small {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.text-white {
+  color: white;
+}
+.text-black {
+  color: black;
+}
+.d-flex {
+  display: flex;
+}
+.flex-width {
+  width: 50%;
+}
+.direction-column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.cursor {
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.header-container {
+  background-color: #292d33;
+}
+.header {
+  min-height: 8rem;
+}
+
+.header h1 {
+  color: gray;
+  font-size: 3rem;
+}
+
+.icon-font {
+  font-size: 3rem;
+}
+
+.visibility-mobile {
+  display: none;
+}
+.header-content {
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+.banner {
+  min-height: 80rem;
+}
+.banner-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-col-content {
+  gap: 3.5rem;
+  justify-content: center;
+  height: auto;
+  padding: 4rem;
+}
+
+.section-col-content h1,
+.section-col-content p {
+  max-width: 550px;
+}
+
+.btn-size-large {
+  width: 30rem;
+  height: 6rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: black;
+  font-weight: 400;
+}
+.capabilities-container {
+  gap: 3.5rem;
+}
+.capabilities-content {
+  max-width: 80rem;
+  margin: auto;
+}
+.cards {
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: white;
+  flex: 1;
+  border-top: 1rem solid #f68817;
+  padding: 3.5rem 2.5rem;
+  gap: 2.5rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+.welcome-container {
+  min-height: 65rem;
+}
+.welcome-container .sec-1 {
+  flex: 1.5;
+  background-color: white;
+}
+.welcome-container .sec-2 {
+  background-color: white;
+  flex: 2;
+  position: relative;
+}
+.welcome-img-container {
+  height: 100%;
+}
+.bg-container {
+  flex: 1;
+  justify-content: flex-end;
+}
+.bg-color {
+  background-color: #f68817;
+  height: 65rem;
+  width: 80%;
+  transform: scaleY(1.1);
+  align-self: flex-end;
+}
+.img-element {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  bottom: 10%;
+}
+.sec-2-img {
+  object-fit: cover;
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  left: 10%;
+  top: 5%;
+}
+.about-container {
+  min-height: 70rem;
+  width: 85%;
+  position: relative;
+}
+.about-container .about-content {
+  flex: 2;
+}
+.about-cards-container {
+  background-color: #292d33;
+  padding: 2rem;
+  gap: 4rem;
+  width: 100%;
+  min-height: 40rem;
+  z-index: 1;
+}
+.about-card {
+  width: calc(50% - 3rem);
+  gap: 2rem;
+}
+.about-card i {
+  font-size: 5rem;
+  transform: scale(0.9);
+}
+.card-content {
+  gap: 1.5rem;
+}
+.about-container .about-img-container {
+  flex: 1;
+}
+.about-img-container img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 50rem;
+  right: 2rem;
+}
+.card-content h1 {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .w-md-100 {
+    width: 100%;
+  }
+  .visibility-mobile {
+    display: block;
+  }
+  .visibility-desktop {
+    display: none;
+  }
+  .flex-width {
+    width: 100%;
+  }
+  .flex-0 {
+    flex: 0 !important;
+  }
+  .card {
+    flex-basis: 46% !important;
+  }
+  .banner {
+    flex-wrap: wrap-reverse;
+  }
+
+  .direction-column-md {
+    flex-direction: column;
+  }
+
+  .welcome-container {
+    gap: 8rem;
+  }
+
+  .bg-container {
+    background-color: #ddcebb;
+  }
+
+  .sec-2 {
+    background-color: #ddcebb;
+    margin: 2rem;
+  }
+  .about-img-container img {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .cards {
+    flex-direction: column;
+  }
+  .w-sm-100 {
+    width: 100%;
+  }
+}

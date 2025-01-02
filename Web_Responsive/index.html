@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden auto;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100%;
+            background-image: url(./back_img.jpg);
+            background-size: cover;
+            /* flex-wrap: wrap; */
+            background-repeat: no-repeat;
+        }
+
+        .section-1 {
+            height: 70rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+
+        }
+
+        .para {
+            height: 70rem;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .navbar {
+            height: 8rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+            font-size: 2rem;
+            background-color: rgb(63, 38, 38);
+            color: rgb(241, 232, 232);
+        }
+
+        .navbar i {
+            font-size: 3rem;
+        }
+
+        .left {
+            height: 62rem;
+            width: 60%;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            background-image: url(./img_1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .right {
+            height: 50rem;
+            max-width: 40%;
+            /* border: 1px solid black; */
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: column;
+            gap: 2.5rem;
+            font-size: 2.5rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .btn-1 {
+            height: 4rem;
+            width: 15rem;
+            border-radius: 1rem;
+            background-color: black;
+            color: white;
+        }
+
+        /* Media Query for 900px tab
+        @media only screen and (max-width:900px) {
+            html {
+                font-size: 8px;
+            }
+
+        }
+
+        /* Media Query for 500px tab */
+        /* @media only screen and (max-width:900px) {
+            html {
+                font-size: 6px;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+        } */ 
+
+        .section-2 {
+            height: 60rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            gap: 3rem;
+        }
+
+        .capa {
+            height: 20rem;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        .boxes {
+            height: 40rem;
+            width: 90%;
+            /* border: 1px solid black; */
+            display: flex;
+            font-size: 2rem;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 30rem;
+            width: 30%;
+            background-color: white;
+            border-top: 0.8rem solid rgb(255, 198, 12);
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            padding: 2rem;
+        }
+
+        /* Media Query for 900px tab */
+        @media only screen and (max-width:900px) {
+            html {
+                font-size: 8px;
+            }
+
+            .box {
+                width: 40%;
+            }
+
+        }
+
+        .section-3 {
+            height: 80rem;
+            width: 100%;
+            background-image: url(./back_img.jpg);
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-section {
+            height: 60rem;
+            width: 90%;
+            background-color: white;
+            color: black;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .text-sect {
+            width: 40%;
+            height: 50rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 3rem;
+        }
+
+        .btn-1 {
+            height: 4rem;
+            width: 15rem;
+            border-radius: 1rem;
+            background-color: black;
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .photos {
+            width: 50%;
+            height: 70rem;
+            display: flex;
+            position: relative;
+            display: flex;
+        }
+
+        .imges-1 {
+            width: 80%;
+            height: 70rem;
+            background-color: orange;
+            /* position: relative; */
+            position: absolute;
+            background-color: #e9741b;
+            z-index: 1;
+            /* top: 10px; */
+            left: 19rem;
+        }
+
+        .imges-2 {
+            height: 44rem;
+            width: 44rem;
+            position: absolute;
+
+            background-image: url('./img_3.png');
+            /* Replace with your photo */
+            z-index: 2;
+            top: 17rem;
+            left: 5rem;
+        }
+
+        .imges-3 {
+            height: 46rem;
+            width: 49rem;
+            background-image: url(./img_2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 3;
+            position: relative;
+            top: 8rem;
+            left: 14rem;
+        }
+
+        .section-4 {
+            height: 80rem;
+            width: 100%;
+            display: flex;
+        }
+
+        .about {
+            height: 75rem;
+            width: 50%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            /* justify-content: space-between; */
+            font-size: 2rem;
+            padding: 3rem;
+        }
+
+        .about-us {
+            height: 17rem;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /* border: 1px solid black; */
+            position: relative;
+            z-index: 2;
+            left: 8rem;
+            top: 2rem;
+        }
+
+        .info {
+            height: 40rem;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            left: 8rem;
+            top: 8rem;
+
+        }
+
+        .marketing {
+            height: 25rem;
+            width: 50%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(44, 33, 43);
+            color: white;
+            justify-content: center;
+            gap: 2rem;
+            line-height: 2.9rem;
+
+        }
+
+        .person-pic {
+            height: 75rem;
+            width: 50%;
+            /* border: 1px solid black; */
+            background-image: url(./img_4.jpg);
+            background-size: cover;
+            position: relative;
+            right: 25rem;
+            top: 5rem;
+            /* display: flex; */
+        }
+
+        .section-5 {
+            height: 70rem;
+            width: 100%;
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-section {
+            height: 100%;
+            width: 40%;
+            background-image: url(./img_5.jpg);
+            background-size: cover;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .flex-box {
+            height: 90%;
+            width: 60%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 3rem;
+        }
+
+        .flex-head {
+            height: 20rem;
+            width: 70%;
+            /* border:  1px solid black; */
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            line-height: 4rem;
+            font-size: 2rem;
+        }
+
+        .flex-number {
+            height: 42rem;
+            width: 70%;
+            /* border:  1px solid black; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1.7rem;
+        }
+
+        .numbers {
+            height: 18rem;
+            width: 24rem;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            /* align-items: center; */
+        }
+
+        .numbers h1 {
+            font-size: 6rem;
+            color: orange;
+        }
+
+        .section-6 {
+            height: 90rem;
+            width: 100%;
+            /* display: flex; */
+            flex-direction: column;
+            font-size: 1.5rem;
+        }
+
+        .back-img-section {
+            height: 60rem;
+            width: 100%;
+            /* display: flex; */
+            font-size: 3rem;
+            background-image: url(./img_6.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .back-img-head {
+            height: 10rem;
+            width: 100%;
+            text-align: center;
+            color: rgb(254, 254, 254);
+            padding: 2rem;
+            /* border: 1px solid white; */
+        }
+
+        .white-upper-box {
+            height: 68rem;
+            width: 80%;
+            background-color: white;
+            top: 13rem;
+            left: 17rem;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .back-img-footer {
+            height: 30rem;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .smart {
+            height: 23rem;
+            width: 35rem;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 2rem;
+            line-height: 2.5rem;
+        }
+
+        .smart h1,
+        i {
+            color: orange;
+        }
+
+        .smart i {
+            font-size: 2rem;
+        }
+        .section-7{
+            height: 110rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url(./back_img.jpg);
+        }
+        .main-section{
+            height: 90rem;
+            width: 90%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30rem;
+        }
+        .section-img{
+            height: 80rem;
+            width: 85%;
+            /* border: 1px solid black; */
+            background-image: url(./img_7.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* display: flex; */
+            position:absolute;
+            z-index: 3;
+        }
+        .left-section{
+            width: 50%;
+            height: 50rem;
+            background-color: #e9741b;
+            z-index: 1;
+            top: 25rem;
+            bottom: -20rem;
+            position: relative;
+        }
+        .right-section{
+            width: 50%;
+            height: 50rem;
+            background-color: #e9741b;
+            bottom: 20rem;
+            z-index: 2;
+            position: relative;
+        }
+        .text{
+            height: 50rem;
+            width: 55rem;
+            font-size: 2rem;
+            background-color: white;
+            border: 1px solid black;
+            position: relative;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            bottom: -49rem;
+            gap: 4rem;
+            padding-left: 2rem;
+            justify-content: center;
+            
+        }
+        .text p{
+            line-height: 3rem;
+        }
+        
+        .section-8{
+            height: 70rem;
+            width:100%;
+            background-image: url(./img_8.jpeg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+        .container{
+            height: 60rem;
+            width: 80%;
+            /* border: 1px solid black; */
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-direction: column; */
+        }
+        .contact-us{
+            width: 55%;
+            height: 55rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-size: 2rem;
+        }
+        .contact-us h1{
+            color: orange;
+        }
+        .inputs{
+            height: 40rem;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            /* text-align: center; */
+            font-size: 2rem;
+           gap: 2.5rem;
+        }
+        .inputs input{
+            border: none;
+            border-bottom: 0.3rem solid black;
+        }
+        span{
+            color: grey;
+        }
+        .sub{
+            height: 4rem;
+            width: 100%;
+            color: white;
+            background-color: orange;
+            border: none;
+            font-size: 1.6rem;
+        }
+        .call-us{
+            width: 40%;
+            height: 55rem;
+            background-color: #e9741b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        .c{
+            height: 16rem;
+            width: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            gap: 1.8rem;
+        }
+        .c p{
+            font-size: 1.5rem;
+        }
+        .section-9{
+            height: 15rem;
+            width: 100%;
+            background-color: rgb(31, 48, 28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+        }
+        @media only screen and (max-width:900px){
+
+        }
+
+        @media only screen and (max-width:900px){
+        html{
+            font-size: 9.5px;
+        }
+        .para{
+            flex-wrap: wrap-reverse;
+        }
+        .left{
+            width: 80%;
+        }
+        .right{
+            width: 80%;
+        }
+        .box{
+            width: 45%;
+            
+        }
+        .boxes{
+            flex-wrap: wrap;
+        }
+        .poscontainer1{
+            width: 70%;
+        }
+        .poscontainer3{
+            width: 60%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section-1">
+            <div class="navbar">
+                <h1>Logo</h1>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="para">
+                <div class="left">
+
+                </div>
+                <div class="right">
+                    <h1>We Create <br>websites</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem amet ea ab, eius voluptatem
+                        cupiditate fugiat totam est dolore aspernatur! Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <button class="btn-1">CONTACT US</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-2">
+            <div class="capa">
+                <h1>Capabilities</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consequuntur molestiae itaque iure?
+                    tium corrupti aspernatur quas? Lorem ipsum
+                    dolor sit, amet consectetur adipisicing elit. Esse, molestiae.</p>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <h2>Brand Stratergy</h2>
+
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+
+                </div>
+                <div class="box">
+                    <h2>Brand Stratergy</h2>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                </div>
+                <div class="box">
+                    <h2>Brand Stratergy</h2>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                    <p>- Brand equity audit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-3">
+            <div class="white-section">
+                <div class="text-sect">
+                    <h1>We Create <br> Websites</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, sit ipsam? Natus magnam sit
+                        voluptate enim? Cumque molestiae rem eos vero. Suscipit sapiente repudiandae iure perspiciatis?
+                    </p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <div class="btn-1">CONTACT US</div>
+                </div>
+                <div class="photos">
+                    <div class="imges-1"></div>
+                    <div class="imges-2"></div>
+                    <div class="imges-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-4">
+            <div class="about">
+                <div class="about-us">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quia dolor ipsam quibusdam!</p>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                <div class="info">
+                    <div class="marketing">
+                        <h3>1. Stratergy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas quam harum amet, sint
+                            delectus?</p>
+                    </div>
+                    <div class="marketing">
+                        <h3>2. Stratergy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas quam harum amet, sint
+                            delectus?</p>
+                    </div>
+                    <div class="marketing">
+                        <h3>3. Stratergy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas quam harum amet, sint
+                            delectus?</p>
+                    </div>
+                    <!-- <i class="fa-solid fa-hexagon-nodes"></i> -->
+                    <div class="marketing">
+
+                        <h3>4. Stratergy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas quam harum amet, sint
+                            delectus?</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="person-pic">
+
+            </div>
+        </div>
+
+        <div class="section-5">
+            <div class="image-section">
+
+            </div>
+            <div class="flex-box">
+                <div class="flex-head">
+                    <h1>We Help he world's <br>best brands sell more <br> online</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Iusto architecto veritatis
+                        facilis.</p>
+                </div>
+                <div class="flex-number">
+                    <div class="numbers">
+                        <h1>23</h1>
+                        <p>APPS</p>
+                    </div>
+                    <div class="numbers">
+                        <h1>70+</h1>
+                        <p>WEBSITES</p>
+                    </div>
+                    <div class="numbers">
+                        <h1>50+</h1>
+                        <p>TEAMS</p>
+                    </div>
+                    <div class="numbers">
+                        <h1>18k</h1>
+                        <p>HAPPY USERS</p>
+                    </div>
+
+                </div>
+                <!-- <p>Lorem, ipsum dolor.</p> -->
+            </div>
+        </div>
+
+        <div class="section-6">
+            <div class="back-img-section">
+                <div class="back-img-head">
+                    <h1>Quick, Smart & Great Solutions</h1>
+                </div>
+
+            </div>
+            <div class="white-upper-box">
+                <div class="smart">
+                    <h1>Award Winner</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor sit amet. Lorem, ipsum
+                        dolor.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+                <div class="smart">
+                    <h1>Team of Experts</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+                <div class="smart">
+                    <h1>Consulting</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+                <div class="smart">
+                    <h1>Research</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+                <div class="smart">
+                    <h1>Marketing</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+                <div class="smart">
+                    <h1>Management</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quas autem! Nisi magni
+                        accusamus error autem dicta nemo, expedita corrupti! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+
+            </div>
+            <div class="back-img-footer">
+
+            </div>
+        </div>
+
+        <div class="section-7">
+            <div class="main-section">
+                <div class="left-section">
+
+                </div>
+                <div class="right-section">
+
+                </div>
+                <div class="section-img">
+                    <div class="text">
+                        <h1>Convert New Customers With A Powerful Website</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, repellat officia!
+                            Dolorem in brex lime <br>cepturi corrupti saepe sit quam nikhil Quibusdam <br> possimus assumenda ipsum maxime?</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <button class="btn-1">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-8">
+            <div class="container">
+                <div class="contact-us">
+                    <h1>CONTACT US</h1>
+                    <div class="inputs">
+                        
+                        <label for="">Name</label>
+                        <input type="text" name="" id="" placeholder="Enter Your Name">
+                        <label for="">Email</label>
+                        <input type="email" name="" id="" placeholder="Enter a valid email address">
+                        <label for="">Message</label>
+                        <input type="area">
+                        <div class="chech">
+                            <input type="checkbox" name="" id="" placeholder="Terms and Service">
+                        <label for="">I accept the <span>Terms and Service</span></label>
+                        </div>
+                        <button class="sub">SUBMIT</button>
+                    </div>
+
+                </div>
+                <div class="call-us">
+                    <div class="c">
+                        <h1>CALL US</h1>
+                        <p>1(123-456-7890)</p>
+                       <p> 1(234-564-8760)</p>
+                    </div>
+                    <div class="c">
+                        <h1>LOCATION</h1>
+                        <p>121 Rock Street,21 Avenue,</p>
+                        <p>Pune City, NY 7654432190</p>
+                    </div>
+                    <div class="c">
+                        <h1>OUR TOP SERVICES</h1>
+                        <h3>Crafted Brands</h3>
+                        <h3>Visual Identity</h3>
+                        <h3>Web Design</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-9">
+            <div class="footer">
+                <h1>KUNAL BARI</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
