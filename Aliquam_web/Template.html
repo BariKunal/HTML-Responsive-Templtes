@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<Style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden auto;
+    }
+
+    .head {
+        background-image: url(./kb.jpg);
+        height: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* justify-content: space-between; */
+        background-size: cover;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: white;
+    }
+
+    .mid {
+        display: flex;
+        width: 1200px;
+        font-size: 18px;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .mid a {
+
+        text-decoration: none;
+        color: white;
+    }
+
+    .main-box {
+        height: 600px;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .box {
+        display: flex;
+        color: white;
+        width: 500px;
+        height: 600px;
+        justify-content: center;
+
+        text-align: center;
+        align-items: center;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: start;
+    }
+
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .text p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .btn {
+        height: 40px;
+        width: 150px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .main {
+        display: flex;
+        height: 600px;
+        width: 100%;
+        border: 2px solid black;
+    }
+
+    .side-1 {
+        background-color: rgb(228, 228, 228);
+        border: 2px solid grey;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 50px;
+        gap: 30px;
+    }
+
+    .side-1 p {
+        /* display: flex;
+        margin: 35px 0px 86px;
+        font-size: 18px;
+        gap: 10px;
+        padding: 5px; */
+    }
+
+    .side-1 h1 {
+        font-size: 40px;
+
+    }
+
+    .side-1 a {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .side-2 {
+        width: 50%;
+        height: 100%;
+        background-color: red;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    .num {
+        width: 500px;
+        height: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 70px;
+        color: white;
+    }
+
+    .numbers {
+        height: 120px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .t {
+        margin: 40px;
+        height: 20px;
+        width: 100px;
+    }
+
+    .numbers h1 {
+        font-size: 50px;
+    }
+
+    .servises {
+        display: flex;
+        width: 100%;
+        height: 1150px;
+        flex-direction: column;
+        background-color: rgb(246, 246, 246);
+    }
+
+    .ser {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid black; */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .ser h1 {
+        font-size: 40px;
+    }
+
+    .ser p {
+        line-height: 20px;
+    }
+
+    .images {
+        width: 100%;
+        height: 800px;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pics {
+        height: 300px;
+        width: 400px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
+
+    .card {
+        width: 330px;
+        height: 200px;
+        background-image: url(https://th.bing.com/th/id/OIP.r6ZlFGWZmzdrK5xxzjgrAgHaE8?rs=1&pid=ImgDetMain);
+        background-size: cover;
+        /* border: 1px solid black; */
+        /* display: flex; */
+    }
+
+    .text-sec {
+        width: 330px;
+    }
+
+    .btn-1 {
+        height: 150px;
+        width: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-1 button {
+        height: 50px;
+        width: 200px;
+        border-color: red;
+    }
+
+    .section-4 {
+        height: 800px;
+        width: 100%;
+        background-image: url(https://images.unsplash.com/photo-1700348305514-b9eea0c9999b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apart {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+
+    .info {
+        height: 600px;
+        width: 90%;
+        /* border: 1px solid black; */
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+
+    .text-para {
+        height: 250px;
+        width: 400px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+
+    }
+
+    .ser-text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section-5 {
+        height: 500px;
+        width: 100%;
+        /* border: 1px solid black; */
+
+    }
+
+    .testimonial {
+        margin-top: 10px;
+        height: 150px;
+        width: 100%;
+        display: flex;
+        /* border: 1px solid black; */
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        margin-top: 30px;
+    }
+
+    .testimonial-text {
+        width: 100%;
+        height: 300px;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .testimonial a {
+        text-decoration: none;
+    }
+
+    .testimonial h1 {
+        font-size: 40px;
+
+    }
+
+    .t1 {
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        line-height: 23px;
+    }
+    .section-6{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(30, 12, 42);
+        color: white;
+        justify-content: center;
+    }
+    .base{
+        width: 100%;
+        height: 250px;
+        /* border: 1px solid rgb(80, 80, 122); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        /* flex-wrap: wrap; */
+    }
+    .quam{
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer{
+        border: 1px solid rgb(80, 80, 122);
+        height: 90px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding-left: 50px;
+    }
+
+</Style>
+
+<body>
+    <div class="head" id="header">
+        <div class="nav">
+            <div class="left">
+                <h2>KUNAL</h2>
+            </div>
+            <div class="mid">
+                <a href="#">HOME</a>
+                <a href="#">SERVICES</a>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="right">
+                <p>Providing Number</p>
+                <h3>#1 123 456 789</h3>
+            </div>
+        </div>
+        <div class="main-box">
+            <div class="box">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet </p>
+                    <h1>Better Private <br>Security</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis <br> cupiditate
+                        laudantiumvel incidunt?</p>
+                    <button class="btn">Call Us Today</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="section-1">
+        <div class="side-1">
+
+            <h1>Providing Seattle With <br> Superioe Security <br> Solutions</h1>
+            <p> Eius saepe quo expedita voluptatum voluptatem
+                odit fuga consequuntur voluptate accusamus earum. Soluta maiores neque dolore commodi, accusantium
+                distinctio culpa earum, eos saepe incidunt ex placeat optio in ipsa
+                nobis nihil quaerat, rem quas soluta quo enim magni sit. Iste praesentium sit atque ipsum. Voluptate
+                tempore officia ad reprehenderit, explicabo sunt?</p>
+            <a href="#">Click Here</a>
+        </div>
+        <div class="side-2">
+            <div class="t">
+                <h3>Lets Talk</h3>
+            </div>
+            <div class="num">
+                <div class="numbers">
+                    <h1>15+</h1>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="numbers">
+                    <h1>500+</h1>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="numbers">
+                    <h1>128</h1>
+                    <p>Licenssed Offices</p>
+                </div>
+                <div class="numbers">
+                    <h1>2K+</h1>
+                    <p>Accounts Processed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="servises">
+        <div class="ser">
+            <h1>Our Services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, beatae. <br>Lorem ipsum dolor sit amet
+                consectetur.</p>
+        </div>
+        <div class="images">
+            <div class="pics">
+                <div class="card" id="pic-1">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+
+            </div>
+            <div class="pics">
+                <div class="card" id="pic-2">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+            </div>
+            <div class="pics">
+                <div class="card" id="pic-3">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+            </div>
+            <div class="pics">
+                <div class="card" id="pic-4">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+            </div>
+            <div class="pics">
+                <div class="card" id="pic-5">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+            </div>
+            <div class="pics">
+                <div class="card" id="pic-6">
+
+                </div>
+                <div class="text-sec">
+                    <h1>Access Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur . Voluptates deaque ea omnis consequuntur!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-1">
+            <button>View All Services</button>
+        </div>
+    </section>
+
+    <div class="section-4">
+        <div class="apart">
+            <p>Why Contact Us</p>
+            <h1>What Sets Us Apart</h1>
+        </div>
+        <div class="info">
+            <div class="ser-text">
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        recusandae labore ut.</p>
+                </div>
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        ratione,andae labore ut.</p>
+                </div>
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        ratione,recusandae labore ut.</p>
+                </div>
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        recusandae labore ut.</p>
+                </div>
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        ratione, labore ut.</p>
+                </div>
+                <div class="text-para">
+                    <h1>Perfection Anytime</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam autem ipsum cumque commodi, vero
+                        labore ut.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section-5">
+        <div class="testimonial">
+            <h1>Testimonial</h1>
+            <a href="#">CLICK ME --> </a>
+        </div>
+        <div class="testimonial-text">
+            <div class="t1">
+                Lorem, ipsum dolor sit
+                libero doloremque repellendus distinctio officia fuga dolor voluptas eum earum minima laboriosam ea
+                laudantium in dolorem. Suscipit voluptas ratione magni recusandae temporibus!
+            </div>
+            <div class="t1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, corrupti neque voluptates quisquam
+                libero doloremque repellendus distinctio officia fuga dolor voluptas eum earum minima laboriosam ea
+                temporibus!
+            </div>
+            <div class="t1">
+                Lorem, ipsum dolor, corrupti neque voluptates quisquam
+                libero earum minima laboriosam ea
+                laudantium in dolorem. Suscipit voluptas ratione magni recusandae temporibus!
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-6">
+        <div class="base">
+            <div class="quam">
+                <h1>ALIQUAM</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste provident neque sit similique eveniet?
+                </p>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div class="quam">
+                <h2>Services</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing..</p>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div class="quam">
+                <h2>Company</h2>
+                <p>About Us</p>
+                <p>raining</p>
+                <p>Career</p>
+                <p>Contact Us/p>
+            </div>
+            <div class="quam">
+                <h2>Adress</h2>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Mumbai East</p>
+                <p>abc@gmail.com</p>
+                <p>1123456789</p>
+            </div>
+        </div>
+        <div class="footer">
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+</body>
+
+</html>
