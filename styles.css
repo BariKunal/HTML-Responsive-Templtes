@@ -1,0 +1,220 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden auto;
+}
+
+html {
+    font-size: 10px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section Specific Styling */
+.section1_head {
+    font-size: 3rem;
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.logo img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: grey;
+}
+
+.btn_1 {
+    height: auto;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Responsive Section Adjustments */
+.section_1 {
+    height: auto;
+    width: 90%;
+    background-image: url(./man_main.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    gap: 2rem;
+    border: 1px solid red;
+}
+
+.left_text {
+    width: 100%;
+    padding: 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.left_text h1 {
+    font-size: 6rem;
+    color: white;
+}
+
+.section_2 {
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 2rem;
+    padding: 3rem 1rem;
+}
+
+.main_text, .para_text {
+    width: 100%;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.section_2_Footer, .section_3 {
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem 1rem;
+}
+
+.cards {
+    height: auto;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.cards img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Section 4 */
+.section_4 {
+    flex-direction: column;
+    padding: 3rem 1rem;
+}
+
+.sec4_main {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lady_img {
+    height: 30rem;
+    width: 100%;
+    background-size: cover;
+}
+
+.sect_4_text {
+    font-size: 1.5rem;
+    gap: 3rem;
+}
+
+/* Section 5 */
+.section_5 {
+    padding: 3rem 1rem;
+    font-size: 2rem;
+}
+
+.sec_our_head {
+    text-align: center;
+    gap: 2rem;
+}
+
+.main_box {
+    flex-direction: column;
+}
+
+.box_pic {
+    width: 100%;
+}
+
+.pics img {
+    max-width: 100%;
+    height: auto;
+}
+
+.man_text {
+    gap: 1.5rem;
+}
+
+/* Additional Media Queries for Mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .left_text h1 {
+        font-size: 5rem;
+    }
+
+    .section_2 {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 5px;
+    }
+
+    .section_1 h1 {
+        font-size: 4rem;
+    }
+
+    .btn_1 {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .main_box, .sec4_main, .cards {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left_text h1 {
+        font-size: 3.5rem;
+    }
+}
